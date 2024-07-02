@@ -53,7 +53,7 @@
       }
       .produto-imagem img {
         height: auto;
-        border-radius: 5px;
+        border-radius: 5px; /* Adicionei borda arredondada para a imagem */
       }
       .produto-detalhes {
         background-color: #fff;
@@ -71,7 +71,7 @@
       }
       .produto-detalhes select,
       .produto-detalhes input[type="number"] {
-        width: 100%;
+        width: calc(100% - 16px); /* Ajuste para compensar o padding */
         padding: 8px;
         margin-bottom: 10px;
         border: 1px solid #ccc;
@@ -118,6 +118,10 @@
         }
         .produto-container {
           flex-direction: column;
+        }
+        .produto-detalhes select,
+        .produto-detalhes input[type="number"] {
+          width: 100%; /* Ajuste para ocupar toda a largura no mobile */
         }
       }
       @media (max-width: 480px) {
